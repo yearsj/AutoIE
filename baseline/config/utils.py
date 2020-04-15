@@ -7,7 +7,7 @@ from config import Config
 from termcolor import colored
 from transformers import BertTokenizer
 
-bert_model_dir = "bert-base-chinese-pytorch"  # change this if needed
+bert_model_dir = "bert-base-chinese"  # change this if needed
 tokenizer = BertTokenizer.from_pretrained(bert_model_dir, do_lower_case=True)
 
 

@@ -19,7 +19,7 @@ from transformers import BertConfig
 from bert_model import BertCRF
 import utils
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '5,6'
 
 
 def set_seed(opt, seed):
@@ -52,7 +52,7 @@ def parse_arguments_t(parser):
     parser.add_argument('--num_outer_iterations', type=int, default=10, help="Number of outer iterations for cross validation")
 
     # bert hyperparameter
-    parser.add_argument('--bert_model_dir', default='bert-base-chinese-pytorch', help="Directory containing the BERT model in PyTorch")
+    parser.add_argument('--bert_model_dir', default='./bert-base-chinese', help="Directory containing the BERT model in PyTorch")
     parser.add_argument('--max_len', default=180, help="max allowed sequence length")
     parser.add_argument('--full_finetuning', default=True, action='store_true',
                         help="Whether to fine tune the pre-trained model")
